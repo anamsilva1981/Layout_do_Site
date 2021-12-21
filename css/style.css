@@ -1,0 +1,114 @@
+/*Importando fonte do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Atrbuir CSS para todas as páginas*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*Remove traço inferior abaixo do link do menu*/
+}
+body{
+    background-color: rgb(12, 16, 17);
+}
+
+.text-test{
+    color: lightcyan;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.navbar .logo a{
+    color: #547ec7;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #121721;
+    border-bottom: solid #1b202a 1px;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li{
+    list-style: none; /*Remove as bolinhas do menu*/
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400; /*Expessura da borda*/
+    margin-left: 25px; /*Margem entre os itens do menú*/
+}
+
+/*Icone Bars*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer; /*Troca o ponteiro do mouse pela mão para links clicáveis*/
+    display: none; /* Esconder icone quando for site*/ 
+}
+
+/* Menu responsivo*/
+/*Apresentar icone Bars somente quando tela for maior que 947PX*/
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        background-color: #121721;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease; /*Transição Bars*/
+    }
+
+    /*Ativar quando o menu for ativo*/
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li{
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+    }
+
+    .max-width{
+        max-width: 930px;
+    }
+}
