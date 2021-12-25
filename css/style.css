@@ -14,12 +14,6 @@ body{
     background-color: rgb(12, 16, 17);
 }
 
-.text-test{
-    color: lightcyan;
-    margin-bottom: 20px;
-    font-family: 'Ubuntu', 'sans-serif';
-}
-
 .max-width{
     max-width: 1300px;
     padding: 0 10px;
@@ -112,6 +106,13 @@ body{
         max-width: 930px;
     }
 }
+
+
+section{
+    padding: 50px 0;
+
+}
+
 
 /*Personalizar a parte do topo*/
 .top{
@@ -238,5 +239,77 @@ body{
 @media(max-width: 690px){
     .services .serv-content .card{
         width: 100%
+    }
+}
+
+.premium{
+    color: #fff;
+    background-color: #151921;
+    font-family: 'Poppins' sans-serif;
+}
+.premium .title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+.premium .premium-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.premium .premium-content .column-left{
+    width: 45%;
+}
+
+.premium .premium-content .column-left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.premium .premium-content .column-right{
+    width: 55%;
+}
+
+.premium .premium-content .column-right .text{
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.premium .premium-content .column-right p{
+    text-align: justify;
+    font-size: 100;
+}
+
+.premium .premium-content .column-right a{
+   display: inline-block;
+   background: #b02ab7;
+   color: #fff;
+   font-size: 20px;
+   font-weight: 400;
+   padding: 10px 30px;
+   margin-top: 20px;
+   border-radius: 6px;
+   border: 2px solid #b02ab7
+}
+
+.premium .premium-content .column-right a:hover{
+    color: #b02ab7;
+    background: none;
+    transition: all 0.3s ease;
+}
+@media (max-width: 947px) {
+    .premium .premium-content .column-right {
+        width: 100px;
+    }
+    .premium .premium-content .column-left {
+        width: 100px;
     }
 }
